@@ -1,0 +1,390 @@
+@font-face {
+    font-family: 'Brutal Type';
+    src: url('BrutalType-Light.eot');
+    src: local('Brutal Type Light'), local('BrutalType-Light'),
+        url('../fonts/BrutalType-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrutalType-Light.woff2') format('woff2'),
+        url('../fonts/BrutalType-Light.woff') format('woff'),
+        url('../fonts/BrutalType-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brutal Type';
+    src: url('BrutalType-Medium.eot');
+    src: local('Brutal Type Medium'), local('BrutalType-Medium'),
+        url('../fonts/BrutalType-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrutalType-Medium.woff2') format('woff2'),
+        url('../fonts/BrutalType-Medium.woff') format('woff'),
+        url('../fonts/BrutalType-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brutal Type';
+    src: url('BrutalType-Bold.eot');
+    src: local('Brutal Type Bold'), local('BrutalType-Bold'),
+        url('../fonts/BrutalType-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrutalType-Bold.woff2') format('woff2'),
+        url('../fonts/BrutalType-Bold.woff') format('woff'),
+        url('../fonts/BrutalType-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a,
+span.btn,
+button,
+input {
+    transition: all .3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background: #008FF8;
+    color: #fff;
+    font-family: 'Brutal Type' !important;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #008FF8;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #323232;
+}
+
+::selection {
+    background-color: #008FF8;
+    color: #fff;
+}
+
+::-moz-selection {
+    background-color: #008FF8;
+    color: #fff;
+}
+
+.mainWrapper {
+    overflow: hidden;
+}
+
+.container {
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.mainTitle {
+    font-family: "Caveat", serif !important;
+    font-size: 53px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mainHeader {
+    position: relative;
+    overflow: hidden;
+}
+
+.mainHeader::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 106px;
+    z-index: 2;
+    background: url(../img/slide-b1.png);
+}
+
+.mainHeader nav {
+    height: 70px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mainHeader::after {
+    content: '';
+    height: 87px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    z-index: 1;
+    background: url(../img/nav-line.png);
+}
+
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+.mainListNav {
+    display: flex;
+    gap: 20px;
+}
+
+.mainListNav a {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+.mainListNav a:hover {
+    color: #008FF8;
+}
+
+.mainLang a,
+.mainLang {
+    font-family: "Caveat", serif !important;
+    color: #2d2d2d;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mainLang {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.mainLang img {
+    transition: all .3s ease;
+}
+
+.mainLang a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mainLang a:hover img {
+    transform: rotate(360deg);
+}
+
+.mainLang a:hover {
+    color: #008FF8;
+}
+
+.mainSlider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 870px;
+    object-fit: cover;
+}
+
+.mainSlider img {
+
+    object-fit: cover;
+}
+
+.mainSliderCont {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-transform: uppercase;
+    z-index: 2;
+    margin-top: -100px;
+}
+
+.mainSliderCont img {
+    max-width: 296px;
+}
+
+.mainSliderCont1 {
+    font-size: 73px;
+    font-weight: bold;
+}
+
+.mainSliderCont2 {
+    font-size: 110px;
+    font-weight: 300;
+}
+
+.hLeft,
+.hRight {
+    position: absolute;
+    width: 637px;
+    height: 250px;
+    z-index: 1;
+}
+
+.hLeft {
+    background: url(../img/hLeft.png);
+    bottom: 0;
+    left: 0;
+}
+
+.hRight {
+    background: url(../img/hRight.png);
+    bottom: 0;
+    right: 0;
+}
+
+.section1 {
+    min-height: 400px;
+    background: url(../img/sec1.jpg) top center no-repeat;
+    background-size: cover;
+}
