@@ -255,6 +255,7 @@ body {
     top: 70px;
     z-index: 1;
     background: url(../img/nav-line.png);
+    background-size: cover;
 }
 
 .mainNav {
@@ -330,10 +331,10 @@ body {
     justify-content: center;
     min-height: 870px;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .mainSlider img {
-
     object-fit: cover;
 }
 
@@ -387,4 +388,361 @@ body {
     min-height: 400px;
     background: url(../img/sec1.jpg) top center no-repeat;
     background-size: cover;
+    padding: 60px 0;
+}
+
+.missRow {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+    gap: 10px;
+}
+
+.missCol {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    color: #2d2d2d;
+}
+
+.missColBg {
+    background: url(../img/hd1.png) left 10px top 10px no-repeat #008FF8;
+    color: #FFED00;
+    padding: 55px 0;
+    position: relative;
+}
+
+.missCol1 {
+    font-size: 49px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.missCol2 {
+    font-size: 153px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.missCol3 {
+    font-size: 46px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.missCol4 {
+    font-size: 68px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.colHrt {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.missCol5 {
+    padding: 0 30px;
+    align-items: start;
+    gap: 30px;
+    line-height: 140%;
+}
+
+.lbvRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.lbvRow .lbvCol:nth-child(1) {
+    background: url(../img/lbv1.jpg);
+}
+
+.lbvRow .lbvCol:nth-child(2) {
+    background: url(../img/lbv2.jpg);
+}
+
+.lbvRow .lbvCol:nth-child(3) {
+    background: url(../img/lbv3.jpg);
+}
+
+.lbvCol {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    padding: 80px 30px 80px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lbvCol::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 106px;
+    z-index: 2;
+    background: url(../img/slide-b1.png) right;
+}
+
+.lbvCol p {
+    line-height: 140%;
+}
+
+.lbvIco {
+    width: 168px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/lbv-owl.png);
+}
+
+.lbvRow .lbvCol:nth-child(2) .lbvIco {
+    background: url(../img/lbv-owl2.png);
+}
+
+.lbvRow .lbvCol:nth-child(3) .lbvIco img {
+    position: relative;
+    left: 10px;
+}
+
+.lbvRow .lbvCol:nth-child(3)::before {
+    content: '';
+    width: 637px;
+    height: 250px;
+    background: url(../img/hLeft.png);
+    position: absolute;
+    top: -60px;
+    right: -200px;
+    transform: rotate(180deg);
+}
+
+.lbvRow .lbvCol:nth-child(1)::before {
+    content: '';
+    width: 637px;
+    height: 250px;
+    background: url(../img/hRight.png);
+    position: absolute;
+    top: -60px;
+    left: -200px;
+    transform: rotate(180deg);
+}
+
+.lbvTitle {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Caveat", serif !important;
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
+.lbvCol .mainTitle {
+    color: #2d2d2d;
+}
+
+.lbvRow .lbvCol:nth-child(2) p {
+    color: #2d2d2d;
+}
+
+.lbvRow .lbvCol:nth-child(1) .lbvTitle,
+.lbvRow .lbvCol:nth-child(3) .lbvTitle {
+    color: #fff;
+}
+
+.section3 {
+    min-height: 400px;
+    background: url(../img/sec2.jpg) top center no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.bHend {
+    position: absolute;
+    top: 90px;
+    left: -600px;
+    z-index: 2;
+}
+
+.bHend img {
+    width: 1171px;
+}
+
+.achRow {
+    color: #2d2d2d;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 65px;
+    position: relative;
+    z-index: 3;
+}
+
+.achCol1,
+.achCol2,
+.achCol3 {
+    font-family: "Caveat", serif !important;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+.achCol1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.achCol2 {
+    font-size: 76px;
+    font-weight: bold;
+}
+
+.achCol3 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.achCol2 img {
+    position: absolute;
+    right: -60px;
+    bottom: -20px;
+}
+
+.achRow4 {
+    margin-top: 25px;
+}
+
+.achCol4 {
+    background: #fff;
+    position: relative;
+    padding: 35px 35px 0 35px;
+    text-align: center;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.achCol4::after {
+    content: '';
+    width: 100%;
+    height: 88px;
+    position: absolute;
+    bottom: -88px;
+    left: 0;
+    background: url(../img/achCol4.png) top no-repeat;
+}
+
+.achColTitel {
+    font-family: "Caveat", serif !important;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.achColNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/lbv-owl3.png);
+    width: 86px;
+    height: 88px;
+    color: #fff;
+    font-family: "Caveat", serif !important;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.achColNum1,
+.achColNum2 {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+}
+
+.achColNum3 {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+
+.achRow4 .achCol4:nth-child(2) {
+    position: relative;
+    top: -180px;
+}
+
+.achCol4 p {
+    font-size: 19px;
+    line-height: 120%;
+}
+
+.achRow5 {
+    margin-top: 150px;
+}
+
+.achRow6 {
+    margin-top: 150px;
+}
+
+.achRow6 .achCol4:nth-child(1) {
+    position: relative;
+    top: -180px;
+}
+
+.lbvIco,
+.achColNum {
+    transition: all 1s ease;
+}
+
+.lbvCol:hover .lbvIco {
+    transform: rotateY(-360deg);
+}
+
+.achCol:hover .achColNum {
+    transform: rotateY(360deg);
+}
+
+.colHrt img {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slideOne {
+    animation: slide1 5s infinite ease-in-out;
+}
+
+@keyframes slide1 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
