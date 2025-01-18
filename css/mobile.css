@@ -1,0 +1,151 @@
+@media screen and (max-width:1000px) {
+    .mobileNav {
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        background: #fff;
+        align-items: center;
+        padding: 0 25px;
+    }
+
+    .mobileNav img {
+        max-height: 40px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .mainHeader nav {
+        display: none;
+        padding: 25px;
+    }
+
+    .mainHeader nav.active {
+        display: flex;
+        height: auto;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .mainHeader::after {
+        display: none;
+    }
+
+    .mainListNav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mainNav {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .mobileNavBtn {
+        width: 50px;
+        height: 50px;
+        background: #008FF8;
+        border: none;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobileNavBtn span {
+        height: 3px;
+        width: 60%;
+        background: #FFED00;
+    }
+
+    .mainSliderCont {
+        margin-top: 0;
+    }
+
+    .mainSliderCont1 {
+        font-size: 23px;
+    }
+
+    .mainSliderCont2 {
+        font-size: 34px;
+    }
+
+    .mainSlider {
+        min-height: auto;
+    }
+
+    .mainSliderCont {
+        position: relative;
+    }
+
+    .slideOne {
+        display: none;
+    }
+
+    .hLeft,
+    .hRight {
+        display: none;
+    }
+
+    .mainSlider {
+        background: url(../img/header.jpg) top center;
+        background-size: cover;
+        padding: 30px 0 95px 0;
+    }
+
+    .mainSliderCont img {
+        max-width: 200px;
+    }
+
+    .mainSliderCont {
+        text-align: center;
+        padding: 0 25px;
+    }
+
+    .mainHeader::before {
+        background-position: center;
+    }
+
+    .section1 {
+        padding: 25px 0 0 0;
+    }
+
+    .missRow {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .mainTitle {
+        font-size: 30px;
+        line-height: 120%;
+    }
+
+    .missCol5 {
+        padding: 25px;
+        font-size: 16px;
+    }
+
+    .lbvRow {
+        grid-template-columns: 1fr;
+    }
+
+    .lbvCol p {
+        font-size: 16px;
+    }
+
+    .achRow {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .achCol2 img {
+        display: none;
+    }
+}
