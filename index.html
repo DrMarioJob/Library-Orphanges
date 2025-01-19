@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    <button type="button" class="goToTop">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>arrow-up</title>
+            <path d="M13,20H11V8L5.5,13.5L4.08,12.08L12,4.16L19.92,12.08L18.5,13.5L13,8V20Z" />
+        </svg>
+    </button>
     <!-- Mobile nav -->
     <div class="mobileNav">
         <img src="img/logo.svg" alt="Logo">
@@ -23,19 +29,19 @@
     <!-- Mobile nav -->
 
     <main class="mainWrapper">
-        <header class="mainHeader">
+        <header class="mainHeader" id="home">
             <nav>
                 <div class="container">
                     <div class="mainNav">
                         <a href="/" class="logo"><img src="img/logo.svg" alt="Logo"></a>
                         <div class="mainListNav">
-                            <a href="#">Home</a>
-                            <a href="#">About project</a>
-                            <a href="#">Our program</a>
-                            <a href="#">Why is this important</a>
-                            <a href="#">How to help</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Contact</a>
+                            <a href="#home">Home</a>
+                            <a href="#about">About project</a>
+                            <a href="#program">Our program</a>
+                            <a href="#why-is-this">Why is this important</a>
+                            <a href="#how-to-help">How to help</a>
+                            <a href="#blog">Blog</a>
+                            <a href="#contact">Contact</a>
                         </div>
                         <div class="mainLang">
                             <a href="#"><img src="img/en.png" width="40"> en</a>
@@ -57,7 +63,7 @@
             <div class="hRight"></div>
         </header>
 
-        <section class="sec section1">
+        <section class="sec section1" id="about">
             <div class="container">
                 <div class="missRow">
                     <div class="missCol missColBg">
@@ -122,7 +128,7 @@
             </div>
         </section>
 
-        <section class="sec section3">
+        <section class="sec section3" id="program">
             <div class="hrt2"><img src="img/hert2.png" alt="Heart"></div>
             <div class="container">
                 <div class="achRow">
@@ -173,9 +179,7 @@
                             success in the future.
                         </p>
                     </div>
-                </div>
 
-                <div class="achRow achRow4 achRow5">
                     <div class="achCol achCol4">
                         <div class="achColNum achColNum1">6</div>
                         <div class="achColTitel">Teaching self-presentation skills:</div>
@@ -208,10 +212,7 @@
                             maintain children's interest in reading.
                         </p>
                     </div>
-                </div>
-
-                <div class="achRow achRow4 achRow6">
-                    <div class=""></div>
+                    <div class="achColFk"></div>
                     <div class="achCol achCol4">
                         <div class="achColNum achColNum1">5</div>
                         <div class="achColTitel">Developing booklets:</div>
@@ -224,13 +225,12 @@
                             learning.
                         </p>
                     </div>
-                    <div class=""></div>
                 </div>
             </div>
             <div class="bHend"><img src="img/logo-b2.svg" alt="Hend"></div>
         </section>
 
-        <section class="sec section4">
+        <section class="sec section4" id="why-is-this">
             <div class="sec4Left"></div>
             <div class="sec4Right"></div>
             <div class="mainTitle mainTitle2">Value for children<br>from orphanages</div>
@@ -274,7 +274,7 @@
             </div>
         </section>
 
-        <section class="sec section5">
+        <section class="sec section5" id="how-to-help">
             <div class="container">
                 <div class="joinRow">
                     <div class="hrt2 joinHrt2"><img src="img/hert2.png" alt="Heart"></div>
@@ -292,7 +292,7 @@
             </div>
         </section>
 
-        <section class="sec section6">
+        <section class="sec section6" id="contact">
             <div class="sec6Line1"></div>
             <div class="sec6Line2"></div>
             <div class="container">
@@ -348,7 +348,7 @@
             </div>
         </section>
 
-        <section class="sec section7">
+        <section class="sec section7" id="blog">
             <div class="sec7Left"></div>
             <div class="sec7Right"></div>
             <div class="titleWr">
@@ -430,17 +430,17 @@
                     </div>
                     <div class="footerCol">
                         <div class="footerList">
-                            <a href="#">Home</a>
-                            <a href="#">About project</a>
-                            <a href="#">Our program</a>
-                            <a href="#">Why is this important</a>
+                            <a href="#home">Home</a>
+                            <a href="#about">About project</a>
+                            <a href="#program">Our program</a>
+                            <a href="#why-is-this">Why is this important</a>
                         </div>
                     </div>
                     <div class="footerCol">
                         <div class="footerList">
-                            <a href="#">How to help</a>
-                            <a href="#">Blog</a>
-                            <a href="#">Contact</a>
+                            <a href="#how-to-help">How to help</a>
+                            <a href="#blog">Blog</a>
+                            <a href="#contact">Contact</a>
                         </div>
                     </div>
                     <div class="footerCol footerColCont">
@@ -481,6 +481,47 @@
         });
 
         animate();
+    </script>
+
+    <script>
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+        anchorLinks.forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script>
+        const goToTopButton = document.querySelector('.goToTop');
+
+        if (goToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 100) {
+                    goToTopButton.style.display = 'flex';
+                } else {
+                    goToTopButton.style.display = 'none';
+                }
+            });
+
+            goToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
     </script>
 </body>
 

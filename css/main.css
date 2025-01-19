@@ -580,9 +580,11 @@ body {
     color: #2d2d2d;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 65px;
+    row-gap: 120px;
+    column-gap: 68px;
     position: relative;
     z-index: 3;
+    justify-content: center;
 }
 
 .achCol1,
@@ -617,6 +619,11 @@ body {
 
 .achRow4 {
     margin-top: 25px;
+}
+
+.achRow4 .achCol:nth-child(8),
+.achRow4 .achCol:nth-child(5) {
+    top: -150px;
 }
 
 .achCol4 {
@@ -1410,4 +1417,32 @@ body {
 
 .mobileNav {
     display: none;
+}
+
+.goToTop {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    background: #008FF8;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    transition: all .3s ease;
+    display: none;
+}
+
+.goToTop svg {
+    width: 30px;
+    fill: #FFED00;
+}
+
+.goToTop:hover {
+    opacity: 0.7;
 }
